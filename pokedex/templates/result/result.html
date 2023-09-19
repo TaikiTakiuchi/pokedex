@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ポケモン図鑑-検索結果-</title>
+</head>
+<body>
+    <h1>検索結果</h1>
+    <h2>名前：{{name}}</h2>
+    <ul>
+        <li>高さ：{{height}}</li>
+        <li>重さ：{{weight}}</li>
+        <li>タイプ１：{{type1}}</li>
+        <li>タイプ２：{{type2}}</li>
+    </ul>
+    <h2>ステータス</h2>
+    <ul>
+        <li>HP：{{hp}}</li>
+        <li>攻撃：{{attack}}</li>
+        <li>防御：{{defence}}</li>
+        <li>特攻：{{special_attack}}</li>
+        <li>特防：{{special_defence}}</li>
+        <li>素早さ：{{speed}}</li>
+        <li>合計：{{total_stats}}</li>
+    </ul>   
+    <button type="submit" name="open_pokedex">
+        <a href="{% url 'search' %}">検索画面に戻る</a>
+    </button>
+</body>
+</html>
