@@ -6,8 +6,8 @@ def get_pokeinfo(dex_num):
     pokemon_data = pokemon_data.json()#jsonファイルを取得
 
     name = pokemon_data['name']
-    height = pokemon_data['height']
-    weight = pokemon_data['weight']
+    height = pokemon_data['height']/10
+    weight = pokemon_data['weight']/10
 
     types=pokemon_data['types']
     type1=types[0]['type']['name']
@@ -17,7 +17,7 @@ def get_pokeinfo(dex_num):
     except:
         type2='-'
 
-    pokemon_data['sprites']['front_default']
+    pic=pokemon_data['sprites']['front_default']
 
     hp=pokemon_data['stats'][0]['base_stat']
     attack=pokemon_data['stats'][1]['base_stat']
@@ -29,7 +29,7 @@ def get_pokeinfo(dex_num):
 
     request={'name':name,'height':height,'weight':weight,'type1':type1,'type2':type2,
             'hp':hp,'attack':attack,'defence':defence,'special_attack':special_attack,'special_defence':special_defence,
-            'speed':speed,'total_stats':total_stats}
+            'speed':speed,'total_stats':total_stats,'pic':pic}
     
     return request
     

@@ -7,14 +7,14 @@
 </head>
 <body>
     <center>
-            pokedex  ポケモン図鑑<br>
-        <img src="Dragonite.jpg" /><br>
+        pokedex  ポケモン図鑑<br>
+        {% load static %}
+        <img src="{% static 'home\Dragonite.jpg' %}">
         <div>
             随時更新予定<br>
-            カイリューしか勝たん
         </div>
         <button type="submit" name="open_pokedex">
-            <a href="{% url 'search' %}">図鑑</a>
+            <a href="{% url 'search' %}">検索ページへ</a>
         </button>
     </center>   
 </body>

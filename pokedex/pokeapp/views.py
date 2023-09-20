@@ -22,9 +22,19 @@ class resultpage(TemplateView):
 def search_func(request):
     if request.method=="POST":
         dex_num=request.POST['dex_num']
-        pokeinfo=get_pokeinfo(dex_num)
-        return render(request,'result/result.html',pokeinfo)
-    return render(request,'pokedex_search/pokedex.html',{})
+        try:
+            dex_num=int(dex_num)
+        except:
+            return render(request,'pokedex_search/pokedex.html',{'error':"無効な入力です。1~151の図鑑番号を入力してください"}) #文字列が入力された
+        
+        if (dex_num>=1) and (dex_num<=151):#期待通りの数字
+            pokeinfo=get_pokeinfo(str(dex_num))
+            return render(request,'result/result.html',pokeinfo)
+        
+        else:#範囲外の数字
+            return render(request,'pokedex_search/pokedex.html',{'error':"1世代(図鑑番号1~151)の図鑑番号を入れてください"}) 
+           
+    return render(request,'pokedex_search/pokedex.html',{})#このページが呼ばれたときに呼ばれる
 
 
 
