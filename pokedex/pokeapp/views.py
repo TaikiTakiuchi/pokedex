@@ -8,16 +8,17 @@ from .pokeAPI import get_pokeinfo
 class homepage(TemplateView):
     template_name='home/home.html'
     model=PokeModel
- 
-class searchpage(TemplateView):
-    template_name='pokedex_search/pokedex.html'
-    model=PokeModel
-        
-
-class resultpage(TemplateView):
-    template_name='result/result.html'
+class summary_page(TemplateView):
+    template_name='home/home_summary.html'
     model=PokeModel
 
+class manufacturinghistory_page(TemplateView):
+    template_name='home\home_manufacturinghistory.html'
+    model=PokeModel
+
+class updateinfo_page(TemplateView):
+    template_name='home/home_updateinfo.html'
+    model=PokeModel
 
 def search_func(request):
     if request.method=="POST":

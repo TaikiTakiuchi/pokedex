@@ -1,0 +1,89 @@
+html {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+name{
+    font-size:200%
+}
+
+nav{
+    width: 100%;    /*横幅の指定*/
+    border-top: 1px solid orange;   /*上部の線の色を指定*/
+    border-bottom: 1px solid orange;    /*下部の線の色を指定*/
+    margin-bottom: 5px; /**/
+    overflow: hidden;   /*おまじない*/
+}
+nav ul{
+    width: 60%; /*横幅の指定*/
+    margin-left: 20%;   /*左端から20%右側に動かす*/
+}
+nav li{
+    width: calc(25% - 2px); /*横幅の指定（線の分をマイナスする）*/
+    border-left: 1px solid orange;  /*線を描く*/
+    text-align: center; /*文字を中央に*/
+    float: left;    /*左から並べる*/
+}
+nav li:last-child{
+    border-right: 1px solid orange; /*li要素の最後の物は右側に線を描く*/
+}
+nav a{
+    display: block; /*1つのli全体にリンクを有効にする*/
+    text-decoration: none;  /*ブラウザ標準のリンク装飾をオフに*/
+    color:#313131;  /*文字色の変更*/
+    letter-spacing: 5px;    /*文字と文字の間隔をあける*/
+    font-weight: 400;   /*文字の太さを調整*/
+    line-height: 50px;  /*行間の指定（ナビボタンの高さ指定）*/
+}
+nav a:hover{
+    background-color: orange;   /*背景色の指定*/
+    color: #fff;    /*文字色の変更*/
+    transition: 1s;   /*ホバー時の動きをなめらかにする*/
+}
+div{
+    text-align: center;
+}
+
+a{
+    text-align: center;
+}
+
+.btn,
+a.btn,
+button.btn {
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1.5;
+  position: relative;
+  display: inline-block;
+  padding: 1rem 4rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  color: #212529;
+  border-radius: 0.5rem;
+}
+
+.btn--orange,
+a.btn--orange {
+  color: #fff;
+  background-color: #eb6100;
+}
+
+.btn--orange:hover,
+a.btn--orange:hover {
+  color: #fff;
+  background: #f56500;
+}
+
+a.btn--radius {
+  border-radius: 100vh;
+}
