@@ -1,20 +1,32 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ポケモン図鑑-検索-</title>
+    <link rel="stylesheet" href="{% static 'pokedex_search\pokedex.css' %}">
 </head>
 <body>
-    <h2>pokedex</h2>
-    <p>↓本命の入力</p>
-    <input type="file" name="input_pic" accept="image/jpeg, image/png">
-    <p>↓テスト用の入力</p>
-    <div>{{error}}</div>
-    <form method="POST" action="">
-        {% csrf_token %}
-        <input type="text" name="dex_num" >
-        <button type="submit">検索</button>
-    </form>
+    <center id="pokedex">
+        <div class="red">
+            <div class="bluelight"></div>
+            <div class="yellowlight"></div>
+            <div class="greenlight"></div>
+            <!--<div class="line"></div>-->
+            <div id="display">
+                <p >↓本命の入力</p>
+                <input type="file" name="input_pic" accept="image/jpeg, image/png">
+                <p>↓テスト用の入力</p>
+                <p class="error">{{error}}</p>
+                <form method="POST" action="" class="submit">
+                    {% csrf_token %}
+                    <input type="text" name="dex_num" >
+                    <button type="submit">検索</button>
+                </form>
+            </div>
+        </div>
+    </center>
+
 </body>
 </html>
