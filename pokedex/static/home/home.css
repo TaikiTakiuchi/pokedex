@@ -3,10 +3,11 @@ html {
     box-sizing: border-box;
 }
 
-name{
-    font-size:200%
-}
+#メニューを作成
 
+div#logo{
+    font-size: 500%;
+}
 nav{
     width: 100%;    /*横幅の指定*/
     border-top: 1px solid orange;   /*上部の線の色を指定*/
@@ -40,10 +41,11 @@ nav a:hover{
     color: #fff;    /*文字色の変更*/
     transition: 1s;   /*ホバー時の動きをなめらかにする*/
 }
-div{
+div#contents{
     text-align: center;
 }
 
+#ボタンを作成
 a{
     text-align: center;
 }
@@ -87,3 +89,5 @@ a.btn--orange:hover {
 a.btn--radius {
   border-radius: 100vh;
 }
+
+

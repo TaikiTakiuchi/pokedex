@@ -7,9 +7,35 @@
     <title>pokedex</title>
     <link rel="stylesheet" href="{% static 'home\home.css' %}">
     <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
+    <script type="text/javascript"> 
+        <!--javascriptを直書きしないと画像にアクセスできないので仕方なく直書き-->
+        const images = ['{% static "home/Dragonite2.jpg" %}','{% static "home/Dragonite3.jpg" %}','{% static "home/Dragonite1.jpg"%}',];
+
+        let num = -1;
+        
+        function slide_time() {
+        if (num === 2) {
+            num = 0;
+        } else {
+            num++;
+        }
+        document.getElementById("img_slide").src = images[num];
+        }
+        setInterval(slide_time, 3000);
+    /*
+        const music=new Audio("/static/home/opening.mp3")
+        window.onload=function(){
+            var sound_confirm=confirm('音声を再生します。よろしいでしょうか？');
+            if (sound_confirm==True){
+                music.play();
+            }
+        }
+        setInterval(slide_time, 1300);
+    */
+    </script>
 </head>
 <body>
-    <name>pokedex  ポケモン図鑑</name>
+    <h1>pokedex  ポケモン図鑑</h1>
     <nav>
         <ul>
             <li><a href="{% url 'home' %}">TOP</a></li>
@@ -19,12 +45,13 @@
         </ul>
     </nav>
 
-    <div>
+    <div id="contents">
         {% load static %}
         <div>TOP</div>
-        <img src="{% static 'home\Dragonite.jpg' %}"><br>
+        <div><img id="img_slide" src='{% static "home/Dragonite1.jpg" %}'></div>
         <div>随時更新予定</div>
         <a href="{% url 'search' %}" class="btn btn--orange btn--radius" name="open_pokedex">図鑑を開く</a>
     </div>
+    
 </body>
 </html>
