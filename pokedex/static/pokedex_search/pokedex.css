@@ -2,18 +2,45 @@
 .red{
     background: #ff0000;
     border: 1px solid #999;
-    height: 100ch;
-    width: 100ch;
+    height: 70ch;
+    width: 57ch;
     text-align: left;
+    border-top-left-radius: 3ch 3ch;
+    border-top-right-radius: 3ch 3ch;
 
 }
-div >div{
+.statas{
+    list-style: none; 
+}
+.display{
     background: #ffffff;
     border: 1px solid #999;
-    height: 50ch;
-    width: 50ch;
-    
-    transform :translate(13ch,3ch);
+    height: 25ch;
+    width: 35ch;
+    transform :translate(11ch,3ch);
+}
+
+.pokepic{
+    height: 7ch;
+    width: 7ch;
+    transform:translate(3ch,2ch);
+}
+
+.dex_number{
+    transform:translate(4ch,2ch);
+}
+
+.statas{
+    transform: translate(15ch,-10ch);
+}
+
+.input{
+    transform: translate(0ch,5ch);
+}
+
+.exp{
+    transform : translate(-1ch,-8ch);
+    list-style: none; 
 }
 
 .bluelight{
@@ -39,8 +66,3 @@ div >div{
     transform :translate(25ch,-9ch);
 }
 
-.explanation{
-    width:5ch;
-    height:5ch;
-    transform : translate(25ch,35ch);
-}

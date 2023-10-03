@@ -9,34 +9,37 @@
     <link rel="stylesheet" href="{% static 'pokedex_search\pokedex.css' %}">
 </head>
 <body>
-    <center id="pokedex">
+    <center>
         <div class="red">
             <div class="bluelight"></div>
             <div class="yellowlight"></div>
             <div class="greenlight"></div>
             <!--<div class="line"></div>-->
-            <div id="display">
-                <img class="pokepic" src="">
-                <span class="dex_number">dex_number</span>
-                <ul>
-                    <li><span class="name">name</span></li>
-                    <li><span class="tribe">tribe</span></li>
-                    <li><span class="hight">height</span></li>
-                    <li><span class="weight">weight</span></li>
+            <div class="display">
+                {% load static %}
+                <img class="pokepic" src='{% static "pokedex_search/question.png" %}'>
+                <div class="dex_number">No.???</div>
+                <ul class="statas">
+                    <li><span class="name">なまえ：???</span></li>
+                    <li><span class="tribe">???ポケモン</span></li>
+                    <li><span class="hight">たかさ：???m</span></li>
+                    <li><span class="weight">おもさ：???kg</span></li>
                 </ul>
-                <ul class ="explanation">
-                    <li><span class="explanation1">explanation1</span></li>
-                    <li><span class="explanation2">explanation2</span></li>
-                    <li><span class="explanation3">explanation3</span></li>
+                <ul class="exp">
+                    <li><span>ここにせつめいがひょうじされるよ</span</li>
+                    <li><span>.</span></li>
+                    <li><span>.</span></li>
                 </ul>
             </div>
-            <input type="file" name="input_pic" accept="image/jpeg, image/png">
-            <p>↓テスト用の入力</p>
-            <p class="error">{{error}}</p>
-            <form method="POST" action="" class="submit">
-            {% csrf_token %}
-            <input type="text" name="dex_num" >
-            <button type="submit">検索</button>
+            <div class="input">
+                <input type="file" name="input_pic" accept="image/jpeg, image/png">
+                <p>↓テスト用の入力</p>
+                <p class="error">{{error}}</p>
+                <form method="POST" action="" class="submit">
+                {% csrf_token %}
+                <input type="text" name="dex_num" >
+                <button type="submit">検索</button>
+            </div>
         </div>
     </center>
 
