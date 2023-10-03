@@ -1,17 +1,17 @@
 
 .red{
-    background: #dc143c;
+    background: #ff0000;
     border: 1px solid #999;
-    height: 70ch;
-    width: 70ch;
+    height: 100ch;
+    width: 100ch;
     text-align: left;
 
 }
 div >div{
     background: #ffffff;
     border: 1px solid #999;
-    height: 35ch;
-    width: 47ch;
+    height: 50ch;
+    width: 50ch;
     
     transform :translate(13ch,3ch);
 }
@@ -39,3 +39,8 @@ div >div{
     transform :translate(25ch,-9ch);
 }
 
+.explanation{
+    width:5ch;
+    height:5ch;
+    transform : translate(25ch,35ch);
+}
