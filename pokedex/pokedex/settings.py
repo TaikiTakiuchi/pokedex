@@ -120,7 +120,11 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS=[os.path.join(BASE_DIR,"static/"),]
     
+# 画像を保存する先の指定
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+# 画像をdjango側で読み込むための設定
+MEDIA_URL = '/media/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

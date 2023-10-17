@@ -1,25 +1,32 @@
+@font-face { 
+    font-family: "pkmn_font"; 
+    /* フォントが置かれているパスを書く */ 
+    src: local('/static/pokedex_search/pkmn_r.ttf') format('truetype'); 
+  }
+
 
 .red{
-    background: #ff0000;
+    background: #ed0000;
     border: 1px solid #999;
     height: 70ch;
-    width: 57ch;
+    width: 60ch;
     text-align: left;
     border-top-left-radius: 3ch 3ch;
     border-top-right-radius: 3ch 3ch;
+    font-family: "pkmn_font"; 
 
 }
 .statas{
     list-style: none; 
 }
 .display{
-    background: #ffffff;
-    border: 1px solid #999;
-    height: 25ch;
+    /*background: #8bad0f;←ゲームボーイの液晶に近い色だが、取り込む画像が背景が白いので没*/
+    background: #8BAC0F;
+    border: 40px solid #EDF0E0;
+    height: 23ch;
     width: 35ch;
-    transform :translate(11ch,3ch);
+    transform :translate(9ch,5ch);
 }
-
 .pokepic{
     height: 7ch;
     width: 7ch;
@@ -66,3 +73,7 @@
     transform :translate(25ch,-9ch);
 }
 
+.input_pic{
+    width: 5ch;
+    height: 5ch;
+}
